@@ -10,6 +10,7 @@ use OpenSpout\Common\Entity\Row;
 use OpenSpout\Common\Entity\Style\Style;
 use OpenSpout\Writer\Common\Creator\WriterEntityFactory;
 use OpenSpout\Writer\XLSX\Writer;
+use OpenSpout\Writer\Common\AbstractOptions;
 
 /**
  * Trait Exportable.
@@ -27,11 +28,11 @@ trait Exportable
     private $rows_style;
 
     /**
-     * @param \OpenSpout\Reader\ReaderInterface|\OpenSpout\Writer\WriterInterface $reader_or_writer
+     * @param AbstractOptions $options
      *
      * @return mixed
      */
-    abstract protected function setOptions(&$reader_or_writer);
+    abstract protected function setOptions(&$options);
 
     /**
      * @param string        $path
